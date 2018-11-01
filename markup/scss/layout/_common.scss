@@ -1,0 +1,174 @@
+body {
+	font-family: $base-font-family;
+}
+
+.container {
+	max-width: 962px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#main {
+	max-width: 962px;
+	margin: 0 auto;
+	padding: 57px 30px 0;
+	display: flex;
+	font-weight: 400;
+	
+	#content-holder {
+		display: inline-block;
+		width: 538px;
+		
+		.article {
+			overflow: hidden;
+			padding: 28px 0;
+			border-bottom: 1px solid $base-border-color;
+
+			&:first-child {
+				padding-top: 0;
+
+				.text-holder {
+					padding-left: 0;
+				}
+
+				.image-holder {
+					float: none;
+					padding-bottom: 11px;
+				}
+			}
+
+			.image-holder {
+				float: left;
+			}
+
+			.text-holder {
+				overflow: hidden; 
+				padding: 0 0 1px 17px;
+
+				h3 {
+					font-size: 23px;
+					font-weight: bold;
+
+					a {
+						@include animate(color);
+
+						color: $base-heading-color;
+						text-decoration: none;
+
+						&:hover {
+							color: $link-color-hover;
+						}
+					}
+				}
+				
+				time {
+					font-size: 13px;
+					color: $gray;
+					font-weight: bold;
+				}
+
+				p {
+					font-size: $base-font-size;
+				}
+			}
+
+			.button-link {
+				@include animate(background-color border-color color);
+
+				border: 1px solid $button-border-color;
+				font-size: 12px;
+				font-weight: bold;
+				color: $button-text-color;
+				text-align: center;
+				padding: 4px 6px;
+				display: inline-block;
+				text-decoration: none;
+				
+				&:hover {
+					color: $button-text-color-hover;
+					background-color: $button-background-color-hover;
+				}
+			}
+		}
+
+		.share {
+			padding: 20px 0 40px;
+			display: flex;
+			align-items: center;
+
+			p {
+				display: inline-block;
+				margin: 0;
+				padding-right: 6px;
+			}
+
+			ul {
+				display: inline-block;
+				list-style: none;
+				margin: 0;
+				padding-left: 0;
+			}
+
+			li {
+				float: left;
+				padding: 0 6px; 
+
+				i {
+					font-size: 35px;
+				}
+			
+				.fa-twitter-square {
+					color: #41abe1;
+				}
+				
+				.fa-facebook-square {
+					color: #577bc9;
+				}
+			
+				a {
+					@include animate (opacity);
+
+					&:hover {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+
+		.pagination {
+			font-size: 11px;
+			font-weight: bold;
+			text-align: center;
+			display: block;
+
+			ul {
+				display: inline-block;
+				list-style: none;
+				margin: 22px 0 43px;
+				padding-left: 0;
+			}
+
+			li {
+				float: left;
+			}
+
+			a {
+				@include animate(background-color color);
+
+				color: $base-link-color;
+				padding: 3px 5px;
+				text-decoration: none;
+				border: 1px solid $purple;
+				margin: 0 1px;
+				font-size: 11px;
+				background-color: $purple;
+
+				&:hover, 
+				&.active {
+					background-color: $link-background-color-hover;
+					color: $link-color-hover;
+				}
+			}
+		}
+	}
+}

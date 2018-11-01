@@ -47,7 +47,7 @@ body {
         padding: 0 0 1px 17px; }
         #main #content-holder .article .text-holder h3 {
           font-size: 23px;
-          font-weight: bold; }
+          font-weight: 400; }
           #main #content-holder .article .text-holder h3 a {
             -webkit-transition: color 0.3s linear;
             transition: color 0.3s linear;
@@ -68,10 +68,12 @@ body {
         font-size: 12px;
         font-weight: bold;
         color: #9c0059;
+        background-color: #fff;
         text-align: center;
         padding: 4px 6px;
         display: inline-block;
-        text-decoration: none; }
+        text-decoration: none;
+        vertical-align: top; }
         #main #content-holder .article .button-link:hover {
           color: #fff;
           background-color: #9c0059; }

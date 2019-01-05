@@ -2,10 +2,48 @@ body {
 	font-family: $base-font-family;
 }
 
+.menu-active{
+	#nav {
+
+		.drop{
+		
+			@include media('<desktop') {
+				opacity:1;
+				z-index: 9999;
+				height:auto;
+			}
+		}
+		
+		.menu-opener{
+			
+			&:after,
+			&:before{
+				transform:rotate(45deg);
+				top:16px;
+				left:15%;
+				right:15%;
+			}
+
+			&:after {
+				transform:rotate(-45deg);
+			}
+
+			span {
+				opacity:0;
+			}
+		}
+	}
+} 
+
 .container {
 	max-width: 962px;
 	margin: 0 auto;
 	padding: 0;
+
+	@include media ('<desktop') {
+		max-width: 100%;
+		padding: 0 15px;
+	}
 }
 
 #main {
@@ -14,11 +52,11 @@ body {
 	padding: 57px 30px 0;
 	display: flex;
 	font-weight: 400;
-	
+
 	#content-holder {
 		display: inline-block;
-		width: 538px;
-		
+		max-width: 538px;
+
 		.article {
 			overflow: hidden;
 			padding: 28px 0;
@@ -33,12 +71,24 @@ body {
 
 				.image-holder {
 					float: none;
-					padding-bottom: 11px;
+					margin-bottom: 11px;
+					max-width: 100%;
+					height: auto;
+					
+					@include media ('<desktop') {
+						text-align: center;
+					}
 				}
 			}
 
 			.image-holder {
 				float: left;
+
+				@include media ('<phone') {
+					float: none;
+					text-align: center;
+					margin-bottom: 11px;
+				}
 			}
 
 			.text-holder {
@@ -69,6 +119,10 @@ body {
 
 				p {
 					font-size: $base-font-size;
+				}
+
+				@include media ('<phone') {
+					padding-left: 0;
 				}
 			}
 
@@ -172,5 +226,16 @@ body {
 				}
 			}
 		}
+
+		@include media('<desktop') {
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+
+	@include media('<desktop') {
+		flex-direction: column;
+		padding-right: 15px;
+		padding-left: 15px;
 	}
 }

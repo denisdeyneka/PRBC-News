@@ -7,17 +7,33 @@
 		.container {
 			display: flex;
 			justify-content: space-between;
+
+			@include media ('<desktop') {
+				padding-left: 15px;
+				padding-right: 15px;
+				max-width: 100%;
+			}
+
+			@include media ('<tablet') {
+				display: block;
+				padding-bottom: 20px;
+			}
 		}
 
 		.footer-nav{
 			font-size: $base-font-size;
 			font-weight: 300;
+			float: left;
 
 			ul {
 				padding: 20px 0 48px;
 				margin: 0;
 				list-style: none;
 				column-count: 2;
+
+				@include media('<phone') {
+					column-count: 1;
+				}
 			}
 
 			a {
@@ -29,6 +45,16 @@
 				&:hover {
 					color: $link-footer-color-hover;
 				}
+			}
+			
+			@include media ('<tablet') {
+				float: none;
+				// padding-left: 50px;
+				font-size: $base-font-size * 1.5;
+			}
+
+			@include media('<xs-phone') {
+				font-size: $base-font-size * 1.2;
 			}
 		}
 
@@ -42,6 +68,12 @@
 				list-style: none;
 				margin-bottom: 0;
 				float: right;
+
+				@include media ('<tablet') {
+					float: none;
+					text-align: center;
+					display: inline-block;
+				}
 			}
 
 			li {
@@ -54,6 +86,18 @@
 
 				&:first-child {
 					padding-left: 0;
+				}
+
+				@include media ('<tablet') {
+					padding: 0 30px;
+				}
+
+				@include media ('<phone') {
+					padding: 0 20px;
+				}
+
+				@include media ('<xs-phone') {
+					padding: 0 10px;
 				}
 			}
 
@@ -74,15 +118,45 @@
 
 			.image-holder {
 				text-align: right;
+				
+				@include media ('<tablet') {
+					text-align: center;
+				}
+			}
+
+			@include media ('<tablet') {
+				float: none;
+				text-align: center;
 			}
 		}
 	}
 
-	.logo-list {
-		list-style: none;
-		display: flex;
-		justify-content: space-between;
-		padding: 38px 0 54px;
-		margin: 0;
+	.footer-secondary {
+
+		.logo-list {
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			padding: 38px 0 54px;
+			margin: 0;
+
+			@include media ('<desktop') {
+				text-align: center;
+				display: inline-block;
+				margin: 0 auto;
+				padding-bottom: 34px;
+
+				li {
+					display: inline-block;
+					padding-bottom: 20px;
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+			}
+		}
+
+		@include media ('<desktop') {
+			text-align: center;
+		}
 	}
 }

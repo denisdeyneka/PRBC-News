@@ -11,7 +11,8 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link href="images/favicon_prbc.ico" rel="shortcut icon" type="image/x-icon" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js" defer><\/script>')</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js" defer><\/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" defer></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" defer></script>
 	<script src="js/jquery.main.js" defer></script>
@@ -22,20 +23,23 @@
 			<div class="logo">
 				<a href="#"><img src="images/logo.png" alt="PRBC Logo"></a>
 			</div>
-			<nav class="header-nav">
-				<ul>
-					<li><a href="#">how it works</a></li>
-					<li><a href="#">about the credit score</a></li>
-					<li><a href="#">faq</a></li>
-					<li><a href="#">code of ethnics</a></li>
-					<li><a href="index.html">news</a></li>
-					<li><a href="#">contact us</a></li>
-				</ul>
+			<nav id="nav">
+				<div class="header-nav">
+					<a href="#" class="menu-opener"><span>Menu</span></a>
+					<ul class="drop">
+						<li><a href="#">how it works</a></li>
+						<li><a href="#">about the credit score</a></li>
+						<li><a href="#">faq</a></li>
+						<li><a href="#">code of ethnics</a></li>
+						<li><a href="index.html">news</a></li>
+						<li><a href="#">contact us</a></li>
+					</ul>
+				</div>
 			</nav>
 		</div>
-		<div class = "heading-holder">
+		<div class="heading-holder">
 			<div class="container">
-				<h1>News</h1>		
+				<h1>News</h1>
 			</div>
 		</div>
 	</header>
@@ -137,14 +141,16 @@
 					</div>			
 				</div>
 			</div>
-			<div class="container">
-				<ul class="logo-list">
-					<li><img src="images/bbb.png" alt="BBB"></li>
-					<li><img src="images/cfsi.png" alt="CFSI"></li>
-					<li><img src="images/fordfoundation.png" alt="Ford"></li>
-					<li><img src="images/accion.png" alt="Accion"></li>
-					<li><img src="images/on_omidyar.png" alt="OMN"></li>
-				</ul>
+			<div class="footer-secondary">
+				<div class="container">
+					<ul class="logo-list">
+						<li><img src="images/bbb.png" alt="BBB"></li>
+						<li><img src="images/cfsi.png" alt="CFSI"></li>
+						<li><img src="images/fordfoundation.png" alt="Ford"></li>
+						<li><img src="images/accion.png" alt="Accion"></li>
+						<li><img src="images/on_omidyar.png" alt="OMN"></li>
+					</ul>
+				</div>
 			</div>
 	</footer>
 </body>

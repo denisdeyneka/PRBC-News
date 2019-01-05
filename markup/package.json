@@ -25,5 +25,8 @@
     "load-grunt-tasks": "3.5.2",
     "jquery": ">=3.0.0",
     "popper.js": "^1.12.9"
+  },
+  "dependencies": {
+    "hamburgers": "^1.1.3"
   }
 }

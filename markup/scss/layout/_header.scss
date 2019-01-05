@@ -1,33 +1,52 @@
 #header {
+
 	background-color: $purple;
 	border-bottom: 52px solid #2c5770;
 
 	.logo {
 		margin: 0 0 -25px -4px;
 		float: left;
+
+		@include media ('<desktop') {
+			margin-left: 0;
+		}
 	}
 	
-	.header-nav{
+	#nav {
 		font-size: 20px;
 
-		ul {
-			padding: 28px 0 0;
-			list-style: none;
-			margin-bottom: 0;
-			float: right;
+		@include media('<desktop') {
+			font-size: 16px;
 		}
 
-		li {
-			padding: 0 12px;
-			float: left;
+		@include media('<tablet') {
+			font-size: 15px;
+		}
+	}
+
+	.drop {
+		float: right;
+		margin-bottom: 0;
+		list-style: none;
+		padding: 28px 0 0;
+		vertical-align: top;
 		
-			&:last-child {
-				padding-right: 0;
-			}
+		li {
+			float: left;
+			padding: 0 12px;
 
 			&:first-child {
 				padding-left: 0;
 			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			@include media ('<desktop') {
+				float: none;
+				padding: 0;
+			}	
 		}
 
 		a {
@@ -36,9 +55,87 @@
 			color: $base-link-color;
 			text-decoration: none;
 
-			&:hover {
+			&:hover{
 				color: $link-header-color-hover;
+				
+				@include media('<desktop') {
+					color: $link-header-color-hover;
+					background-color: $purple;
+					border-color: $purple;
+				}
+	    	}
+
+			@include media('<desktop') {
+				display: block;
+				padding: 10px 10px 10px 25px;
+				margin: -1px 0 0;
+				border: 1px solid #f59a07;
 			}
+		}
+
+		@include media ('<desktop') {
+			width: 40%;
+			position:absolute;
+			top: 69px;
+			right:0;
+			opacity:0;
+			z-index: -2;
+			transition: opacity .3s linear, z-index .3s linear;
+			box-shadow:  0 1px 3px rgba(0, 0, 0, .15);
+			text-align: left;
+			padding: 0;
+			border-top: 1px solid #f59a07;
+			background-image: url("../images/header_bgn.png");
+			background-size: cover; 
+		}
+
+		@include media ('<tablet') {
+			width: 100%;
+			top: 96px;
+		}
+	}
+
+	.menu-opener {
+		@extend %clearfix; 
+		
+		display:none;
+		float:right;
+		width:50px;
+		height:50px;
+		position:relative;
+		top: 19px;
+		right: -10px;
+		border-radius:3px;
+		text-indent:-9999px;
+		overflow: hidden;
+		outline: none;
+		
+		&:before,
+		&:after,
+		& span{
+			background: #f9ad33;
+			border-radius:4px;
+			position:absolute;
+			top:16px;
+			left:20%;
+			right:20%;
+			height:3px;
+			margin-top:-2px;
+			transition:all 0.2s linear;
+		}
+		
+		&:before,
+		&:after{
+			content:'';
+			top:6px;
+		}
+		
+		&:after{
+			top:26px;
+		}
+
+		@include media('<desktop') {
+			display:block;
 		}
 	}
 

@@ -251,7 +251,7 @@ body {
         text-align: left;
         padding: 0;
         border-top: 1px solid #f59a07;
-        background-image: url("../images/header_bgn.png");
+        background-image: url("../images/header-bgn.png");
         background-size: cover; } }
     @media (max-width: 767px) {
       #header .drop {
@@ -292,7 +292,7 @@ body {
   #header .heading-holder {
     color: #fff;
     text-align: right;
-    background-image: url("../images/header_bgn.png");
+    background-image: url("../images/header-bgn.png");
     background-size: cover;
     padding: 25px 0 31px; }
     #header .heading-holder h1 {
@@ -346,7 +346,7 @@ body {
           font-size: 24px; } }
       @media (max-width: 479px) {
         #footer .footer-main .footer-nav {
-          font-size: 19.2px; } }
+          font-size: 16px; } }
     #footer .footer-main .socials {
       font-size: 30px;
       color: #fff;

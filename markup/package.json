@@ -23,7 +23,7 @@
     "grunt-svgmin": "4.0.0",
     "grunt-svgstore": "1.0.0",
     "load-grunt-tasks": "3.5.2",
-    "jquery": ">=3.0.0",
+    "jquery": ">=3.5.0",
     "popper.js": "^1.12.9"
   },
   "dependencies": {
